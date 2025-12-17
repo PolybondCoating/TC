@@ -1,1 +1,109 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f7f7f7;
+  color: #333;
+}
+
+/* HEADER */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.logo {
+  height: 48px;
+}
+
+.company-details h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.company-details p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* MAIN */
+.container {
+  max-width: 1100px;
+  margin: 24px auto;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 6px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.controls input,
+.controls select {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f0f0f0;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.download-btn {
+  padding: 6px 12px;
+  background: #e86b1c;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.download-btn:hover {
+  background: #cf5c14;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 16px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  th:nth-child(3),
+  td:nth-child(3) {
+    display: none;
+  }
+}
 
