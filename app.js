@@ -31,12 +31,25 @@ function applyFilter() {
 }
 tableBody.innerHTML += `
 <tr>
-  <td data-label="Code">${p.code}</td> <td data-label="Name">${p.name}</td><td data-label="Type">${p.type}</td>
+  <td data-label="Code / Name">
+    <div class="mobile-title">
+      <span>${p.code}</span>
+      <span>${p.name}</span>
+    </div>
+  </td>
+
+  <td data-label="Type">${p.type}</td>
+
   <td data-label="Download">
-    <a class="download-btn" href="${p.pdf}" target="_blank">Download</a>
+    <div class="download-icon">
+      <a href="${p.pdf}" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724933.png">
+      </a>
+    </div>
   </td>
 </tr>
 `;
+
 
 function render(list) {
   const tbody = document.getElementById("productTable");
