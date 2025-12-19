@@ -29,6 +29,16 @@ function applyFilter() {
 
   render(filtered);
 }
+tableBody.innerHTML += `
+<tr>
+  <td data-label="Code">${p.code}</td>
+  <td data-label="Name">${p.name}</td>
+  <td data-label="Type">${p.type}</td>
+  <td data-label="Download">
+    <a class="download-btn" href="${p.pdf}" target="_blank">Download</a>
+  </td>
+</tr>
+`;
 
 function render(list) {
   const tbody = document.getElementById("productTable");
