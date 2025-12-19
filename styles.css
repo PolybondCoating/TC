@@ -125,12 +125,8 @@ td {
   color: #777;
 }
 
-/* MOBILE CARD VIEW */
-@media (max-width: 360px) {
-
-  .container {
-    padding: 6px;
-  }
+/* MOBILE VIEW */
+@media (max-width: 700px) {
 
   table thead {
     display: none;
@@ -145,7 +141,7 @@ td {
   }
 
   tr {
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px;
@@ -154,25 +150,32 @@ td {
 
   td {
     border: none;
-    padding: 6px 2px;
+    padding: 6px 0;
     font-size: 13px;
   }
 
-  td:before {
-    content: attr(data-label);
-    display: block;
-    font-weight: 300;
-    margin-bottom: 2px;
-    color: #444;
+  /* Code + Name on same line */
+  .mobile-title {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 14px;
   }
 
-  /* Make download button big & friendly */
-  .download-btn {
-    display: block;
-    width: 100%;
+  /* Hide TYPE label text */
+  td[data-label="Type"]::before {
+    display: none;
+  }
+
+  /* Download icon alignment */
+  .download-icon {
+    display: flex;
+    justify-content: flex-end;
     margin-top: 6px;
-    text-align: center;
-    padding: 10px;
-    font-size: 11px;
+  }
+
+  .download-icon img {
+    width: 26px;
+    height: 26px;
   }
 }
