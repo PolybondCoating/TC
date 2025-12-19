@@ -1,32 +1,56 @@
-* {
-  box-sizing: border-box;
-  font-family: Bank Gothic medium, Helvetica, sans-serif;
-}
-
-body {
-  margin: 0;
-  background: #f7f7f7;
-  color: #333;
+:root {
+  --brand-primary: #FFA300;
+  --brand-black: #000000;
+  --brand-white: #FFFFFF;
 }
 
 /* HEADER */
 .site-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 120px auto 120px;
   align-items: center;
-  gap: 16px;
   padding: 16px 24px;
-  background: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
+  background: var(--brand-white);
+  border-bottom: 2px solid var(--brand-primary);
 }
 
 .logo {
-  height: 68px;
+  height: 50px;
+  width: auto;
+  justify-self: start;
+}
+
+.company-details {
+  text-align: center;
 }
 
 .company-details h1 {
   margin: 0;
-  font-size: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--brand-black);
 }
+
+/* BUTTONS */
+.download-btn {
+  padding: 6px 12px;
+  background: var(--brand-primary);
+  border-radius: 4px;
+  color: var(--brand-black);
+  font-weight: 600;
+}
+
+.download-btn:hover {
+  background: #e39100;
+}
+
+/* Tabs */
+.tab.active {
+  background: var(--brand-primary);
+  color: var(--brand-black);
+  border-color: var(--brand-primary);
+}
+
 
 /* MAIN */
 .container {
