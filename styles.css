@@ -6,11 +6,15 @@
 
 @font-face {
   font-family: 'BankGothic';
-  src: url('BankGothic.woff2') format('woff2'),
-       url('BankGothic.woff') format('woff');
+  src: url('dev/fonts/bankgothic-md-bt-medium-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
+body {
+  font-family: 'BankGothic', Arial, Helvetica, sans-serif;
+}
+
 
 body {
   font-family: 'BankGothic', Arial, Helvetica, sans-serif;
