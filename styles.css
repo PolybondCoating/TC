@@ -3,8 +3,8 @@
 ====================================================== */
 :root {
   /* Layout Size */
-  --page-width-desktop: 68%;
-  --page-width-mobile: 95%;
+  --page-width-desktop: 100%;
+  --page-width-mobile: 100%;
 
   /* Spacing */
   --section-padding: 24px;
@@ -13,6 +13,7 @@
   /* Sizes */
   --header-height: 110px;
   --search-height: 44px;
+  --search-width: 80%
   --row-height: 48px;
 
   /* Styling */
