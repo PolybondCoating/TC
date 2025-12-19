@@ -127,13 +127,44 @@ td {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .controls {
-    flex-direction: column;
+
+  .site-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
   }
 
-  th:nth-child(3),
-  td:nth-child(3) {
-    display: none;
+  .logo {
+    justify-self: center;
+    height: 40px;
+  }
+
+  .company-details h1 {
+    font-size: 18px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .controls input,
+  .controls select {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 14px;
   }
 }
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  min-width: 650px;
+}
+
+
 
