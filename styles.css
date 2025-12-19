@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Bank Gothic medium, Helvetica, sans-serif;
 }
 
 body {
@@ -20,17 +20,17 @@ body {
 }
 
 .logo {
-  height: 48px;
+  height: 68px;
 }
 
 .company-details h1 {
   margin: 0;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .company-details p {
   margin: 2px 0 0;
-  font-size: 13px;
+  font-size: 12px;
   color: #666;
 }
 
@@ -52,7 +52,7 @@ body {
 .controls input,
 .controls select {
   padding: 10px 12px;
-  font-size: 14px;
+  font-size: 11px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -80,7 +80,7 @@ td {
   color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .download-btn:hover {
