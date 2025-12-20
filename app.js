@@ -1,50 +1,54 @@
-fetch("products.json")
-  .then(res => res.json())
-  .then(data => {
-    window.products = data;
-    renderTable(data);
-  })
-  .catch(() => alert("Failed to load product list"));
+document.addEventListener("DOMContentLoaded", () => {
 
-const tableBody = document.getElementById("productTable");
-const searchBox = document.getElementById("searchBox");
-const typeFilter = document.getElementById("typeFilter");
+  const tableBody = document.getElementById("productTable");
+  const searchBox = document.getElementById("searchBox");
+  const typeFilter = document.getElementById("typeFilter");
 
-function renderTable(list) {
-  tableBody.innerHTML = "";
+  fetch("products.json")
+    .then(res => res.json())
+    .then(data => {
+      window.products = data;
+      renderTable(data);
+    })
+    .catch(() => alert("Failed to load product list"));
 
-  list.forEach(p => {
-    if (!p.code) return;
+  function renderTable(list) {
+    tableBody.innerHTML = "";
 
-    const row = document.createElement("tr");
+    list.forEach(p => {
+      if (!p.code) return;
 
-    row.innerHTML = `
-      <td>${p.code}</td>
-      <td>${p.name}</td>
-      <td>${p.colour || "-"}</td>
-      <td><a class="download-btn" href="${p.pdf}" target="_blank">Download</a></td>
-    `;
+      const row = document.createElement("tr");
 
-    tableBody.appendChild(row);
-  });
-}
+      row.innerHTML = `
+        <td>${p.code}</td>
+        <td>${p.name}</td>
+        <td>${p.colour || "-"}</td>
+        <td><a class="download-btn" href="${p.pdf}" target="_blank">Download</a></td>
+      `;
 
-function applyFilters() {
-  let filtered = window.products;
+      tableBody.appendChild(row);
+    });
+  }
 
-  const text = searchBox.value.toLowerCase();
-  const type = typeFilter.value;
+  function applyFilters() {
+    let filtered = window.products || [];
 
-  filtered = filtered.filter(p =>
-    (p.code?.toLowerCase().includes(text) ||
-     p.name?.toLowerCase().includes(text))
-  );
+    const text = searchBox.value.toLowerCase();
+    const type = typeFilter.value;
 
-  if (type)
-    filtered = filtered.filter(p => p.type === type);
+    filtered = filtered.filter(p =>
+      (p.code?.toLowerCase().includes(text) ||
+       p.name?.toLowerCase().includes(text))
+    );
 
-  renderTable(filtered);
-}
+    if (type)
+      filtered = filtered.filter(p => p.type === type);
 
-searchBox.addEventListener("input", applyFilters);
-typeFilter.addEventListener("change", applyFilters);
+    renderTable(filtered);
+  }
+
+  searchBox.addEventListener("input", applyFilters);
+  typeFilter.addEventListener("change", applyFilters);
+
+});
