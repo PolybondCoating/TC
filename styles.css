@@ -60,7 +60,7 @@ body {
 }
 
 .hero-overlay {
-  width: 70%;
+  width: 1920px;
   display: flex;
   justify-content: space-between;
   align-items: center;
