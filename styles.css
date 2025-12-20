@@ -47,6 +47,17 @@ body {
   margin-bottom: 14px;
 }
 
+/* Make search box longer */
+#searchBox {
+  flex: 1;              /* expands to fill remaining width */
+  min-width: 300px;
+}
+
+/* Keep dropdown neat */
+#typeFilter {
+  width: 180px;
+}
+
 .controls input,
 .controls select {
   padding: 9px 12px;
