@@ -18,7 +18,7 @@ body {
 /* HEADER */
 .site-header {
   display: grid;
-  grid-template-columns: 120px auto 120px;
+  grid-template-columns: auto auto 120px;
   align-items: center;
   padding: 16px 24px;
   background: var(--brand-white);
