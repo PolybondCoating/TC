@@ -92,7 +92,7 @@ th:nth-child(3),
 td:nth-child(3) { width: 20%; }     /* Colour */
 
 th:nth-child(4),
-td:nth-child(4) { width: 30px; }   /* Download */
+td:nth-child(4) { width: 20px; }   /* Download */
 
 
 /* scroll area */
