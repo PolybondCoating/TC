@@ -34,11 +34,11 @@ body {
   text-transform: uppercase;
   max-width: 1000px;
   width: 70%;
-  background: white;
+  background: rgba(255,255,255,0.09);
   margin: 32px auto;
   padding: 24px;
   border-radius: 8px;
-  box-shadow: 0 3px 20px rgba(0,0,0,.08);
+  box-shadow: 0 3px 20px rgba(0,0,0,.09);
 }
 
 /* CONTROLS */
@@ -84,16 +84,13 @@ table {
 }
 
 th:nth-child(1),
-td:nth-child(1) { width: 10%; }   /* Code */
+td:nth-child(1) { width: 30%; }   /* Code */
 
 th:nth-child(2),
-td:nth-child(2) { width:350px; }     /* Product Name */
+td:nth-child(2) { width:50%; }     /* Product Name */
 
 th:nth-child(3),
-td:nth-child(3) { width: auto; }     /* Colour */
-
-th:nth-child(4),
-td:nth-child(4) { width: auto; }   /* Download */
+td:nth-child(3) { width:20%; }   /* Download */
 
 
 /* scroll area */
@@ -155,11 +152,11 @@ body::before {
   position: fixed;
   inset: 0;
   background: url("overlay.png") no-repeat center;
-  background-position: 30px 500px;
-  background-size: 42%;      /* control overlay size */
+  background-position: -120px 300px;
+  background-size: 30%;      /* control overlay size */
   opacity: 0.30;             /* transparency */
   pointer-events: none;      /* clickable content stays active */
-  z-index: 2;
+  z-index: 1;
 }
 
 /* ensure content stays above overlay */
