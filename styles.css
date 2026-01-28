@@ -157,7 +157,7 @@ body::before {
   background: url("overlay.png") no-repeat center;
   background-position: bottom right;
   background-size: 60%;      /* control overlay size */
-  opacity: 0.08;             /* transparency */
+  opacity: 1.0;             /* transparency */
   pointer-events: none;      /* clickable content stays active */
   z-index: 0;
 }
