@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
       row.innerHTML = `
         <td>${p.code}</td>
         <td>${p.name}</td>
-        <td>${p.colour || "-"}</td>
         <td><a class="download-btn" href="${p.pdf}" target="_blank">Download</a></td>
       `;
 
