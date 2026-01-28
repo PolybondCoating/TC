@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchBox = document.getElementById("searchBox");
   const typeFilter = document.getElementById("typeFilter");
 
-  fetch("products28.1.26.json")
+  fetch("products28..26.json")
     .then(res => res.json())
     .then(data => {
     window.products = data;
