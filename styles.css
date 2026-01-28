@@ -167,58 +167,74 @@ body::before {
   z-index: 1;
 }
 
-@media (max-width: 768px) {
 
-  .container {
-    width: 92%;
-    max-width: none;
-    margin: 16px auto;
-    padding: 16px;
-  }
+///// Mobile View
+@media (max-width: 469px) and (orientation: portrait) {
 
   .site-header {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     text-align: center;
-    gap: 10px;
+    gap: 9px;
   }
 
   .logo {
+    height: 21px;
     margin: 0 auto;
   }
-}
-@media (max-width: 768px) {
 
+  .site-header h1 {
+    font-size: clamp(16px, 6vw, 22px); /* SCALE, not px */
+    margin-top: 8px;
+    
+    .container {
+    width: 94%;
+    margin: 12px auto;
+    padding: 9px;
+  }
+ /* CONTROLS */
   .controls {
     flex-direction: column;
-  }
+    gap: 6px;
+
+    }
 
   #typeFilter,
   #searchBox {
     width: 100%;
     min-width: unset;
-  }
-}
-@media (max-width: 768px) {
-
-  th:nth-child(3),
-  td:nth-child(3) {
-    display: none;   /* hide Colour */
+    font-size: 13px;
   }
 
-  th:nth-child(4),
-  td:nth-child(4) {
-    width: 80px;
+  /* TABLE */
+  table {
+    font-size: 12px;
   }
 
   th, td {
-    font-size: 11px;
     padding: 8px;
+    text-align: left;
   }
-}
-@media (max-width: 768px) {
-  body::before {
-    background-size: 70%;
-    background-position: center 40%;
-    opacity: 0.18;
+
+  /* HIDE DESKTOP COLUMNS */
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* CODE COLUMN */
+  .code-cell {
+    width: 72px;
+    white-space: nowrap;
+  }
+
+  /* PRODUCT NAME = DOWNLOAD LINK */
+  .product-link {
+    display: block;
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .product-link:active {
+    color: var(--brand-primary);
   }
 }
