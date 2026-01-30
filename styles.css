@@ -84,10 +84,10 @@ table {
 }
 
 th:nth-child(1),
-td:nth-child(1) { width: 30%; }   /* Code */
+td:nth-child(1) { width: 20%; }   /* Code */
 
 th:nth-child(2),
-td:nth-child(2) { width:50%; }     /* Product Name */
+td:nth-child(2) { width:60%; }     /* Product Name */
 
 th:nth-child(3),
 td:nth-child(3) { width:20%; }   /* Download */
