@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       row.innerHTML = `
         <td>${p.code}</td>
         <td>${p.name}</td>
-        <td><a class="download-btn" href="${p.pdf}" target="_blank">Download</a></td>
+        <td><a class="download-btn" href="${p.pdf}" target="_blank">PDF</a></td>
       `;
 
       tableBody.appendChild(row);
