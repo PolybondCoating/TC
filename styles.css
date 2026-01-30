@@ -51,7 +51,7 @@ body {
 /* Make search box longer */
 #searchBox {
   flex: 1;              /* expands to fill remaining width */
-  min-width: 300px;
+  min-width: auto;
 }
 
 /* Keep dropdown neat */
